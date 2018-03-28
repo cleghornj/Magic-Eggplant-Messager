@@ -9,6 +9,7 @@
   </head>
   <body>
     <a-scene cursor="rayOrigin: mouse" background="color: black">
+      <a-entity laser-controls="hand: left" raycaster="showLine: true; far: 100" line="color: blue; opacity: 1"></a-entity>
       <a-assets>
         <a-asset-item id="myModelObj" src="eggplant.obj"></a-asset-item>
         <a-asset-item id="myModelMtl" src="eggplant.mtl"></a-asset-item>
