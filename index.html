@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic Eggplant Messager</title>
+    <meta charset="utf-8"/>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse" background="color: black">
+      <a-assets>
+        <a-asset-item id="myModelObj" src="eggplant.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="eggplant.mtl"></a-asset-item>
+        <a-asset-item id="myMesObj" src="message.obj"></a-asset-item>
+        <a-asset-item id="myMesMtl" src="message.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity onmouseenter="myEnterFunction()" onmouseleave="myLeaveFunction()" id=eggplant obj-model="obj: #myModelObj; mtl: #myModelMtl" position="-0.5 1 -1"></a-entity>
+      <a-entity id=message obj-model="obj: #myMesObj; mtl: #myMesMtl" position="0 1.4 -0.75" ></a-entity>
+      <a-entity id=ps position="-0.4 1.15 -1.25" particle-system=" enabled: false; particleCount: 2000; maxAge: 1; velocitySpread: 10 7.5 10; positionSpread: 0 0 0; preset: stars; texture: dist/images/star2.png; color: #0000FF,#00FF00,#FF0000; velocityValue: 0 10 -2; size: .5; rotationAxis: z; rotationAngle: 0.785398"></a-entity>
+    </a-scene>
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
+
